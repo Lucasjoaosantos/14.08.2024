@@ -328,6 +328,8 @@ def dashboard():
 app.register_blueprint(cotacoes_bp)
 app.register_blueprint(weather_bp)
 
+asgi_app = WsgiToAsgi(app)
+
 if __name__ == "__main__":
     app.run(debug=True)
 
