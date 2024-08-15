@@ -9,6 +9,7 @@ from datetime import datetime
 from cotacoes.routes import cotacoes_bp  # Importando o Blueprint
 from flask import Flask, render_template, jsonify # Importe o modulo jsonify
 from weather.routes import weather_bp  # Importando o Blueprint
+from asgiref.wsgi import WsgiToAsgi
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "sua_chave_secreta"  # Substitua por uma chave secreta segura
